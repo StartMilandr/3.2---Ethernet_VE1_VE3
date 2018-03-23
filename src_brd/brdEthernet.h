@@ -10,8 +10,8 @@
   #include <MDR32F9Qx_eth.h>
 #endif 
 
-#define MAX_ETH_TX_DATA_SIZE 1514 / 4
-#define MAX_ETH_RX_DATA_SIZE 1514 / 4
+#define MAX_ETH_TX_DATA_SIZE  1514 + 4  // + 4 - for ControlTX (Length)
+#define MAX_ETH_RX_DATA_SIZE (1514 + 4) / 4
 
 #define FRAME_MAC_SIZE  12
 #define FRAME_LEN_SIZE   2
